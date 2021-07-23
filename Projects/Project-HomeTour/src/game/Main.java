@@ -65,14 +65,12 @@ public class Main {
 			player.moveTo(command[1]);
 			return;
 		}
-		
 		for(int i = (player.currentRoom.getItemCount() - 1); i >= 0; i--) {
 			if(command[1].equals(player.currentRoom.getItem(i).functionalName)) {
 				System.out.println(player.currentRoom.getItem(i).interact(command[0]));
 				return;
 			}
 		}
-		
 		System.out.println("\nError: Invalid command or target.");
 		return;
 	}
